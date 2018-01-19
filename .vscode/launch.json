@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Full-Stack",
+      "configurations": [
+        "Node",
+        "Chrome"
+      ]
+    }
+  ],
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Node Attach",
+      "protocol": "inspector",
+      "remoteRoot": "/Users/joncart/Desktop/node-todo"      
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceRoot}/public"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Node",
+      "program": "${workspaceRoot}/server.js"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Docker Attach",
+      "protocol": "inspector",
+      "localRoot": "${workspaceRoot}",
+      "remoteRoot": "/usr/src/app"
+    },
+    {
+      "name": "NodeJS Launch (Azp)",
+      "type": "node",
+      "request": "attach",
+      "protocol": "inspector",
+      "preLaunchTask": "prepareDebug",
+      "port": 51788,
+      "address": "127.0.0.1",
+      "localRoot": "${workspaceRoot}",
+      "remoteRoot": "/usr/src/app"
+    }
+  ]
+}
