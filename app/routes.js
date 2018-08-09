@@ -19,7 +19,7 @@ module.exports = function (app) {
     app.get('/api/todos', function (req, res) {
         // use mongoose to get all todos in the database
         console.log("Yay");
-        getTodos(res);
+        getTodos(res, req);
     });
 
 

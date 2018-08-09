@@ -28,24 +28,15 @@
       "type": "node",
       "request": "launch",
       "name": "Node",
-      "program": "${workspaceRoot}/server.js"
+      "program": "${workspaceRoot}/server.js",
+      "autoAttachChildProcesses": true,
+      "console": "integratedTerminal"
     },
     {
       "type": "node",
       "request": "attach",
       "name": "Docker Attach",
       "protocol": "inspector",
-      "localRoot": "${workspaceRoot}",
-      "remoteRoot": "/usr/src/app"
-    },
-    {
-      "name": "NodeJS Launch (Azp)",
-      "type": "node",
-      "request": "attach",
-      "protocol": "inspector",
-      "preLaunchTask": "prepareDebug",
-      "port": 51788,
-      "address": "127.0.0.1",
       "localRoot": "${workspaceRoot}",
       "remoteRoot": "/usr/src/app"
     }
